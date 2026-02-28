@@ -14,6 +14,7 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- HERO SECTION -->
     <section class="hero">
       <img
         id="toggleTheme"
@@ -23,51 +24,96 @@
       />
       <div class="hero-pic">
         <div class="inner-circle"></div>
-        <img
-          src="assets/img.jpg"
-          alt="ZulQarnain"
-        />
+        <img src="assets/img.jpg" alt="ZulQarnain" />
       </div>
       <div class="hero-info">
         <h1>ZulQarnain</h1>
-        <h2>Frontend Developer</h2>
-        <div class="logo-container">
-          <a href="mailto:zulqarnainop@yahoo.com"
-            ><img src="assets/email_light.png" alt="email logo"
-          /></a>
-        </div>
+        <h2>Web Apps Developer</h2>
+    <!-- CONTACT SECTION -->
+<section class="cta">
+  <div class="contact-card">
+    <span class="contact-label">Reach Me</span>
+    <div class="contact-logos">
+      <div class="contact-item">
+        <a href="mailto:zulqarnainop@yahoo.com" target="_blank">
+          <img src="assets/email_light.png" alt="Email" />
+        </a>
+        <span class="contact-name">Email</span>
       </div>
-    </section>
-    <section class="experience">
-      <h2><b>1</b><br />Years<br />Frontend</h2>
-      <h2><b>4</b><br />Years<br />B.Sc.</h2>
-    </section>
-    <section class="cta">
-      <a href="assets/Resume.pdf" download>
-        <button class="btn download-btn">Download CV</button>
-      </a>
-      <a href="mailto:zulqarnainop@yahoo.com"
-        ><button class="btn contact-btn">Contact Me</button></a
-      >
-    </section>
+      <div class="contact-item">
+        <a href="https://github.com/zulqarna1n" target="_blank">
+          <img src="assets/github_light.png" alt="GitHub" />
+        </a>
+        <span class="contact-name">GitHub</span>
+      </div>
+     <!-- <div class="contact-item">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+          <img src="assets/linkedin_light.png" alt="LinkedIn" />
+        </a>
+        <span class="contact-name">LinkedIn</span>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+    <!-- PROJECTS / SKILLS TOGGLE -->
     <section class="portfolio-skills">
       <div class="btn-bg">
-        <button class="btn-2 active-btn" id="portfolio-btn">Portfolio</button>
+        <button class="btn-2 active-btn" id="projects-btn">Projects</button>
         <button class="btn-2" id="skills-btn">Skills</button>
       </div>
     </section>
-    </section>
-    <section class="skills" id="skills">
-      <div class="wrapper">
-        <h3>Frontend</h3>
-        <article class="frontend-skills">
-          <p>HTML</p>
-          <p>CSS</p>
-          <p>JavaScript</p>
+
+    <!-- PROJECTS SECTION -->
+    <section class="portfolio" id="projects">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A modern, responsive personal portfolio built with HTML, CSS, and JavaScript.</p>
+        <div class="project-links">
+          <a href="https://zulqarna1n.github.io/zulqarnain/" target="_blank">Live Demo</a>
+          <a href="https://github.com/zulqarna1n/zulqarnain" target="_blank">GitHub</a>
+        </div>
       </div>
+      <div class="project-card">
+        <h3>Task Manager App</h3>
+        <p>A web app to organize and track daily tasks with drag-and-drop functionality.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">Live Demo</a>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <!-- Add more project-card divs here -->
     </section>
+
+    <!-- SKILLS SECTION -->
+<section class="skills" id="skills">
+  <div class="skills-cards">
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML Logo" class="skill-logo" />
+      HTML
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS Logo" class="skill-logo" />
+      CSS
+    </div>
+    <!--<div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Logo" class="skill-logo" />
+      JavaScript
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Logo" class="skill-logo" />
+      React.js
+    </div>
+    <div class="skill-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git Logo" class="skill-logo" />
+      Git & GitHub
+    </div> -->
+  </div>
+</section>
+
+    <!-- FOOTER -->
     <footer>
-      <p>&copy ZulQarnain Sikandar 2023</p>
-    </footer>
+  <p>&copy; <a href="https://zulqarna1n.github.io/zulqarnain/" target="_blank">ZulQarnain</a> 2026</p>
+</footer>
   </body>
 </html>

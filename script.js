@@ -1,66 +1,72 @@
-// Click events for buttons
-const portfolio = document.getElementById("portfolio");
-const portfolioBtn = document.getElementById("portfolio-btn");
-const skills = document.getElementById("skills");
+// ======= Elements =======
+const projectsSection = document.getElementById("projects");
+const skillsSection = document.getElementById("skills");
+const projectsBtn = document.getElementById("projects-btn");
 const skillsBtn = document.getElementById("skills-btn");
+const toggleThemeButton = document.getElementById("toggleTheme");
+const themeIcon = document.querySelector('img[alt="theme icon"]');
+const githubLogo = document.querySelector('img[alt="github logo"]');
+const linkedinLogo = document.querySelector('img[alt="linkedin logo"]');
+const emailLogo = document.querySelector('img[alt="email logo"]');
 
-portfolioBtn.addEventListener("click", (event) => {
-  skills.style.display = "none";
-  portfolio.style.display = "flex";
-  skillsBtn.classList.remove("active-btn");
-  portfolioBtn.classList.add("active-btn");
-});
-
-skillsBtn.addEventListener("click", (event) => {
-  skills.style.display = "flex";
-  portfolio.style.display = "none";
-  portfolioBtn.classList.remove("active-btn");
-  skillsBtn.classList.add("active-btn");
-});
-
-// Light & Dark Theme
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleThemeButton = document.getElementById("toggleTheme");
-  const themeIcon = document.querySelector('img[alt="theme icon"]');
-  const githubLogo = document.querySelector('img[alt="github logo"]');
-  const linkedinLogo = document.querySelector('img[alt="linkedin logo"]');
-  const emailLogo = document.querySelector('img[alt="email logo"]');
-
-  const lightLogos = {
+// ======= Logo Paths =======
+const logos = {
+  light: {
+    theme: "assets/theme_light.png",
     github: "assets/github_light.png",
     linkedin: "assets/linkedin_light.png",
     email: "assets/email_light.png",
-    theme: "assets/theme_light.png",
-  };
-
-  const darkLogos = {
+  },
+  dark: {
+    theme: "assets/theme_dark.png",
     github: "assets/github_dark.png",
     linkedin: "assets/linkedin_dark.png",
     email: "assets/email_dark.png",
-    theme: "assets/theme_dark.png",
-  };
+  },
+};
 
-  function setTheme(isDark) {
-    githubLogo.src = isDark ? darkLogos.github : lightLogos.github;
-    linkedinLogo.src = isDark ? darkLogos.linkedin : lightLogos.linkedin;
-    emailLogo.src = isDark ? darkLogos.email : lightLogos.email;
-    themeIcon.src = isDark ? darkLogos.theme : lightLogos.theme;
+// ======= Section Toggle =======
+function showSection(section) {
+  if (section === "projects") {
+    projectsSection.style.display = "flex";
+    skillsSection.style.display = "none";
+    projectsBtn.classList.add("active-btn");
+    skillsBtn.classList.remove("active-btn");
+  } else {
+    projectsSection.style.display = "none";
+    skillsSection.style.display = "flex";
+    skillsBtn.classList.add("active-btn");
+    projectsBtn.classList.remove("active-btn");
   }
+}
 
-  toggleThemeButton.addEventListener("click", () => {
-    const isDark = document.body.classList.toggle("dark-theme");
-    localStorage.setItem("isDark", isDark);
+// Event listeners for toggle buttons
+projectsBtn.addEventListener("click", () => showSection("projects"));
+skillsBtn.addEventListener("click", () => showSection("skills"));
 
-    setTheme(isDark);
-  });
+// ======= Theme Toggle =======
+function applyTheme(isDark) {
+  document.body.classList.toggle("dark-theme", isDark);
+  themeIcon.src = isDark ? logos.dark.theme : logos.light.theme;
+  githubLogo.src = isDark ? logos.dark.github : logos.light.github;
+  linkedinLogo.src = isDark ? logos.dark.linkedin : logos.light.linkedin;
+  emailLogo.src = isDark ? logos.dark.email : logos.light.email;
+  localStorage.setItem("isDark", isDark);
+}
 
-  const loadTheme = () => {
-    const isDark = localStorage.getItem("isDark") === "true";
-    document.body.classList.toggle("dark-theme", isDark);
+function initTheme() {
+  const isDark = localStorage.getItem("isDark") === "true";
+  applyTheme(isDark);
+}
 
-    setTheme(isDark);
-  };
+// Event listener for theme button
+toggleThemeButton.addEventListener("click", () => {
+  const isDark = !document.body.classList.contains("dark-theme");
+  applyTheme(isDark);
+});
 
-  // Load saved theme from local storage or default to light theme
-  loadTheme();
+// ======= DOM Loaded =======
+document.addEventListener("DOMContentLoaded", () => {
+  showSection("projects"); // default visible section
+  initTheme(); // apply saved theme
 });
