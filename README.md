@@ -1,60 +1,43 @@
+Zulqarnain Web Portfolio
+Description
 
-## 🚀 Features
+This is a modern and responsive personal portfolio website for showcasing projects, skills, and contact information. It is built using HTML, CSS, and JavaScript with a focus on professional design, dark/light theme toggle, and interactive project and skill cards.
 
-- Responsive design (works on mobile, tablet, and desktop)
-- Modern and clean user interface
-- Projects showcase section
-- Skills section
-- About me section
-- Contact section
-- Fast loading and optimized
+The portfolio highlights:
 
-## 🛠️ Built With
+Personal information and hero section with profile image.
 
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages (for hosting)
+Projects section with clickable links to live demos and GitHub repositories.
 
-## 📸 Projects Included
+Skills section with skill cards showing logos of technologies.
 
-Each project includes:
+Contact section with clickable icons for email, GitHub, and LinkedIn.
 
-- Description
-- Technologies used
-- GitHub repository link
-- Live demo (if available)
+Fully responsive design across desktop and mobile devices.
 
-## 📦 Deployment
+Dark/light theme support saved in localStorage.
 
-This website is deployed using GitHub Pages.
+Features
 
-To deploy manually:
+Dark/Light Theme Toggle: Click the theme icon to switch between light and dark modes.
 
-1. Push your code to GitHub
-2. Go to repository Settings
-3. Click on Pages
-4. Select the main branch and root folder
-5. Save and your site will be live
+Responsive Design: Optimized for desktops, tablets, and mobile devices.
 
-## 👤 Author
+Project Cards: Card-style layout with hover effects and links.
 
-Your Name  
-GitHub: https://github.com/yourusername  
-Portfolio: https://yourusername.github.io/repository-name/
+Skills Cards: Interactive cards with logos and hover effects.
 
-## 📬 Contact
+Contact Section: “Reach Me” section with clickable logos for easy contact.
 
-You can reach me via:
+Clean and Modern UI: Designed for clarity, usability, and professional presentation.
+Technologies Used
 
-- Email: your@email.com
-- LinkedIn: https://linkedin.com/in/yourprofile
-- GitHub: https://github.com/yourusername
+HTML5
 
-## ⭐ Show your support
+CSS3 (custom properties, flexbox, responsive design)
 
-If you like this project, please consider giving it a star ⭐
+JavaScript (for theme toggle and section switching)
 
----
+Fonts: Google Fonts – Poppins
 
-Thank you for visiting my portfolio!
+Icons: Custom logos for email, GitHub, LinkedIn, HTML, CSS, JavaScript, React, Git/GitHub.
